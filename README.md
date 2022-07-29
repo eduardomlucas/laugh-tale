@@ -27,7 +27,7 @@
 ### Telas
 
 ## Contribuição
-Se você deseja contribuir com o projeto, adicionando novas funcionalidades, revisando o código ou propondo modificações e melhorias, consulte este [GUIA](https://github.com/eduardomlucas/LaughTale/blob/dev/CONTRIBUTING.md) para propor sua contribuição.
+Se você deseja contribuir com o projeto, adicionando novas funcionalidades, revisando o código ou propondo modificações e melhorias, consulte este [GUIA](https://github.com/eduardomlucas/LaughTale/blob/main/CODE_OF_CONDUCT.md) para propor sua contribuição.
 
 ## Créditos
 Se você quiser citar este projeto, você pode citá-lo como:
