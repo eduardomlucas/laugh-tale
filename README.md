@@ -38,7 +38,7 @@ Se você quiser citar este projeto, você pode citá-lo como:
 
 Uma entrada BibTeX para usuários LaTeX é:
 
-    @Misc {jogaAqui,
+    @Misc {laughTale,
      title = {Laugh Tale: Facilitando a Leitura Digital em um Mundo Digital},
      author = {Lucas, Eduardo Machado. e Silva,Rodrigo Rosa da.},
      note= {vers{\~a}o 0.1.1},
