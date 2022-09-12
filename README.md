@@ -20,7 +20,18 @@
 
 ### Funcionalidades
 
+O aplicativo prevê uma séria de funcionalidades. Um breve visão sobre as funcionalidades poder ser observado no diagrama de casos de uso abaixo:
+
+<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/DCU-1.png" width=700 align="center"/>
+
 ### Arquitetura
+
+A  estrutura do projeto foi desenvolvida na arquitetura conforme proposta abaixo. O Front-End escolhido para este projeto consiste na criação de interfaces para uma a aplicação móvel, importante destacar que este projeto não limitou-se apenas a um Front-End, futuramente poderão ser desenvolvidas mais aplicações Front-Ends utilizando o mesmo Back-End com pouquíssimas alterações ou até mesmo sem alterações.
+
+No Back-End utiliza-se a tecnologia  React Native e Javascript. Para gerenciar as informações, optou-se por utilizar um SGBD noSQL, O Sistema de gerenciamento de Banco de Dados (SBGD), no caso foi o Firebase. A aplicação móvel foi desenvolvida utilizando-se o framework React Native no Front-End juntamente com o Expo.
+
+<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tecnologias-1.png"/>
+
 
 ### Modelo ER
 
