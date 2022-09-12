@@ -16,7 +16,14 @@
 
 ## Descrição
 
+Como é possível facilitar o leitor a ter acesso, gerenciar e armazenar de suas próprias leituras sem custos adicionais? Desse modo, propõe-se a criação de uma aplicação para ajudar o leitor, auxiliando a maneira como são armazenadas as leituras, organizando e gerenciando as mesmas, além de possibilitar a leitura dos arquivos de forma digital e sem custos adicionais.
+
 ## Características
+
+- MVP (Mínimo Produto Viável), disponibilizado-se tanto para a plataforma Android quanto para o iOS.
+- Trabalhar com arquivos (Mangás) no formato digital.
+- Desenvolver um sistema que possibilite a leitura dos arquvivos.
+- Realizar o gerenciamento dos arquivos, editar, excluir, listar e ordenar.
 
 ### Funcionalidades
 
@@ -30,28 +37,34 @@ A  estrutura do projeto foi desenvolvida na arquitetura conforme proposta abaixo
 
 No Back-End utiliza-se a tecnologia  React Native e Javascript. Para gerenciar as informações, optou-se por utilizar um SGBD noSQL, O Sistema de gerenciamento de Banco de Dados (SBGD), no caso foi o Firebase. A aplicação móvel foi desenvolvida utilizando-se o framework React Native no Front-End juntamente com o Expo.
 
-<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tecnologias-1.png"/>
+<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tecnologias-1.png" width=700 align="center"/>
 
 
 ### Modelo ER
 
+**Em BREVE**
+
 ### Telas
 
-## Contribuição
+Protótipo das telas.
+
+<a><img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tela_home-1.png" width=200 align="left"/></a>
+<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tela_leitura-1.png" width=200 align="center"/>
+
 Se você deseja contribuir com o projeto, adicionando novas funcionalidades, revisando o código ou propondo modificações e melhorias, consulte este [GUIA](https://github.com/eduardomlucas/LaughTale/blob/main/CODE_OF_CONDUCT.md) para propor sua contribuição.
 
 ## Créditos
 Se você quiser citar este projeto, você pode citá-lo como:
 
 
-    Lucas M. Eduardo; Silva,R.R. (2022) Laugh Tale: Facilitando a Leitura Digital em um Mundo Digital.
+    Lucas,M.E.; Fontoura,D.C.N; Silva,R.R. (2022) Laugh Tale: Facilitando a Leitura Digital em um Mundo Digital.
     Repositório GitHub - https://github.com/eduardomlucas/LaughTale.
 
 Uma entrada BibTeX para usuários LaTeX é:
 
     @Misc {laughTale,
      title = {Laugh Tale: Facilitando a Leitura Digital em um Mundo Digital},
-     author = {Lucas, Eduardo Machado. e Silva,Rodrigo Rosa da.},
+     author = {Lucas, Eduardo Machado.; Fontoura, Diego de Carvalho Neves da. e Silva,Rodrigo Rosa da.},
      note= {vers{\~a}o 0.1.1},
      year = {2022},
      url = {https://github.com/eduardomlucas/LaughTale}
