@@ -1,8 +1,7 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { auth } from '../firebase'
-import { firestore } from '../firebase'
+import { auth, firestore } from '../firebase'
 
 const CadastroScreen = () => {
   const [firstName, setFirstName] = useState('')
@@ -22,19 +21,6 @@ const CadastroScreen = () => {
     return unsubscribe
   }, [])
 
-  const enviarDados = ()=> {
-    firestore
-      .collection('usuario')
-      .add({
-        email: email,
-        firstName: firstName,
-        lastName: lastName
-      })
-      .then(()=>{
-        alert(firstName+'Cadastrado com Sucesso! =)');
-      })
-  }
-
   const handleSignUp = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
@@ -44,11 +30,6 @@ const CadastroScreen = () => {
       })
       .catch(error => alert(error.message))
       handleLogin();
-      enviarDados();      
-  }
-
-  const insertUser = (email, firstName, lastName) => {
-
   }
 
   const handleLogin = () => {
@@ -62,14 +43,14 @@ const CadastroScreen = () => {
     >
       <View style={styles.inputContainer}>
         <TextInput
-          placeholder="First Name"
+          placeholder="Primeiro Nome"
           value={firstName}
           onChangeText={text => setFirstName(text)}
           style={styles.input}
         />
 
         <TextInput
-          placeholder="Last Name"
+          placeholder="Último Nome"
           value={lastName}
           onChangeText={text => setLastName(text)}
           style={styles.input}
@@ -82,7 +63,7 @@ const CadastroScreen = () => {
           style={styles.input}
         />
         <TextInput
-          placeholder="Password"
+          placeholder="Senha"
           value={password}
           onChangeText={text => setPassword(text)}
           style={styles.input}
@@ -91,18 +72,19 @@ const CadastroScreen = () => {
       </View>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity
-          onPress={handleLogin}
+      <TouchableOpacity
+          onPress={handleSignUp}
           style={styles.button}
         >
-          <Text style={styles.buttonText}>Login</Text>
+          <Text style={styles.buttonText}>Cadastrar</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          onPress={handleSignUp}
+          onPress={handleLogin}
           style={[styles.button, styles.buttonOutline]}
         >
-          <Text style={styles.buttonOutlineText}>Register</Text>
+          <Text style={styles.buttonOutlineText}>Voltar</Text>
         </TouchableOpacity>
+        
       </View>
     </KeyboardAvoidingView>
   )
@@ -133,25 +115,35 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   button: {
-    backgroundColor: '#0782F9',
-    width: '100%',
-    padding: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-  },
+      backgroundColor: '#8F43EE',
+      width: '100%',
+      padding: 15,
+      borderRadius: 10,
+      alignItems: 'center',
+      marginTop: 5,
+    },
   buttonOutline: {
     backgroundColor: 'white',
-    marginTop: 5,
-    borderColor: '#0782F9',
+    borderColor: '#8F43EE',
     borderWidth: 2,
+    width: '100%',
+    marginBottom: 5
   },
+  buttonBack: {
+      backgroundColor: '#2B2730',
+      width: '100%',
+      padding: 15,
+      borderRadius: 10,
+      alignItems: 'center',
+      marginTop: 5,
+    },
   buttonText: {
     color: 'white',
     fontWeight: '700',
     fontSize: 16,
   },
   buttonOutlineText: {
-    color: '#0782F9',
+    color: '#8F43EE',
     fontWeight: '700',
     fontSize: 16,
   },

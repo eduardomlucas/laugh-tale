@@ -1,8 +1,7 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { auth, firestore } from '../firebase'
-
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
+import { auth, firestore, firebase } from '../firebase'
 
 const HomeScreen = () => {
   const navigation = useNavigation()
@@ -16,33 +15,35 @@ const HomeScreen = () => {
       .catch(error => alert(error.message))
   }
 
-  const handleTest =()=>{
-      navigation.replace("Test")
+  const handleLeitura =()=>{
+      navigation.replace("Lista de Leitura")
   }
-  
-  const verificaNameUser = ()=>{
-    var nome = firestore.collection('books').where(firebase.firestore.usuario('email'), '==', auth.currentUser?.email ).get('firstName')
-    if(1==1){
-      console.log(nome);
-    }
-    return nome;
+  const handleCriar=()=>{
+    navigation.replace("Criar")
   }
+
   return (
     <View style={styles.container}>
-      <Text>Bem Vindo! {verificaNameUser()}</Text>
-      {/* redireciona para a tela de login */}
+      <Image source={require('../images/logo_.png')} style={styles.logo} />
+      <Text style={styles.headerText}>LAUGH TALE</Text>
+      {/* redireciona para outro menu */}
+      <TouchableOpacity
+        onPress={handleLeitura}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>COMEÇE A LER!</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={handleCriar}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>CRIE SEU MANGÁ</Text>
+      </TouchableOpacity>
       <TouchableOpacity
         onPress={handleSignOut}
         style={styles.buttonLogout}
       >
         <Text style={styles.buttonText}>Sair</Text>
-      </TouchableOpacity>
-      {/* redireciona para outro menu */}
-      <TouchableOpacity
-        onPress={handleTest}
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>COMEÇE A LER!</Text>
       </TouchableOpacity>
 
     </View>
@@ -57,25 +58,34 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-   button: {
-    backgroundColor: '#0782F9',
-    width: '60%',
+  logo: {
+    width: 130,
+    height: 100,
+  },
+  button: {
+    backgroundColor: '#8F43EE',
+    width: '80%',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: 30,
   },
   buttonLogout: {
     backgroundColor: '#EB1D36',
-    width: '60%',
+    width: '45%',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: 250,
   },
   buttonText: {
     color: 'white',
     fontWeight: '700',
     fontSize: 16,
+  },
+  headerText: {
+    color: '#2B2730',
+    fontWeight: '100',
+    fontSize: 40,
   },
 })

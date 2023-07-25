@@ -47,7 +47,7 @@ const LoginScreen = () => {
           style={styles.input}
         />
         <TextInput
-          placeholder="Password"
+          placeholder="Senha"
           value={password}
           onChangeText={text => setPassword(text)}
           style={styles.input}
@@ -66,7 +66,7 @@ const LoginScreen = () => {
           onPress={handleSignUp}
           style={[styles.button, styles.buttonOutline]}
         >
-          <Text style={styles.buttonOutlineText}>Register</Text>
+          <Text style={styles.buttonOutlineText}>Cadastro</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
@@ -98,25 +98,35 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   button: {
-    backgroundColor: '#0782F9',
-    width: '100%',
-    padding: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-  },
+      backgroundColor: '#8F43EE',
+      width: '100%',
+      padding: 15,
+      borderRadius: 10,
+      alignItems: 'center',
+      marginTop: 5,
+    },
   buttonOutline: {
     backgroundColor: 'white',
-    marginTop: 5,
-    borderColor: '#0782F9',
+    borderColor: '#8F43EE',
     borderWidth: 2,
+    width: '100%',
+    marginBottom: 5
   },
+  buttonBack: {
+      backgroundColor: '#2B2730',
+      width: '100%',
+      padding: 15,
+      borderRadius: 10,
+      alignItems: 'center',
+      marginTop: 5,
+    },
   buttonText: {
     color: 'white',
     fontWeight: '700',
     fontSize: 16,
   },
   buttonOutlineText: {
-    color: '#0782F9',
+    color: '#8F43EE',
     fontWeight: '700',
     fontSize: 16,
   },
