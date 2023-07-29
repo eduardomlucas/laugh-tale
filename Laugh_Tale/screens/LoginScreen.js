@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native'
 import { auth } from '../firebase'
 
 const LoginScreen = () => {
@@ -39,6 +39,8 @@ const LoginScreen = () => {
       style={styles.container}
       behavior="padding"
     >
+      <Image source={require('../images/logo_.png')} style={styles.logo} />
+      <Text style={styles.headerText}>LAUGH TALE</Text>
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"
@@ -129,5 +131,15 @@ const styles = StyleSheet.create({
     color: '#8F43EE',
     fontWeight: '700',
     fontSize: 16,
+  },
+  headerText: {
+    color: '#2B2730',
+    fontWeight: '400',
+    fontSize: 40,
+  },
+  logo: {
+    width: 200,
+    height: 150,
+    marginBottom: 20
   },
 })
