@@ -41,10 +41,10 @@ const getDataFromFirestore = async (collectionName) => {
   }
 };
 
-const getAndDisplayImageFromStorage = async (item) => {
+const getAndDisplayImageFromStorage = async (manga) => {
   try {
     const storageRef = firebase.storage().ref();
-    const imageRef = storageRef.child('/mangas/'+item.nomeManga+item.nrCapitulo);
+    const imageRef = storageRef.child('/mangas/'+manga);
 
     const url = await imageRef.getDownloadURL();
     return url;
@@ -54,4 +54,20 @@ const getAndDisplayImageFromStorage = async (item) => {
   }
 };
 
-export { auth, firestore, firebase, storage, getDataFromFirestore, getAndDisplayImageFromStorage };
+const getPhotosArrayFromStorage = async (manga) => {
+  try {
+    const storageRef = firebase.storage().ref();
+    const photosRef = storageRef.child("/mangas/"+manga);
+
+    const result = await photosRef.listAll();
+
+    const photoURLs = (await Promise.all(result.items.map((item) => item.getDownloadURL())));
+    
+    return photoURLs;
+  } catch (error) {
+    console.error('Erro ao obter URLs das fotos:', error);
+    return [];
+  }
+};
+
+export { auth, firestore, firebase, storage, getDataFromFirestore, getAndDisplayImageFromStorage, getPhotosArrayFromStorage };

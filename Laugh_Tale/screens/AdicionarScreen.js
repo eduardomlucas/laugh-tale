@@ -45,7 +45,8 @@ const AdicionarScreen = () => {
   const uploadImage = async (uri) => {
     const response = await fetch(uri);
     const blob = await response.blob();
-    const ref = storage.ref().child('mangas/'+nomeManga+nrCapitulo);
+    aux = nomeManga+nrCapitulo.trim();
+    const ref = storage.ref().child('mangas/'+aux+"/"+aux);
     await ref.put(blob);
     const url = await ref.getDownloadURL();
     // Salvar o URL da imagem no Firestore
@@ -99,7 +100,7 @@ const AdicionarScreen = () => {
             onChangeText={text => setNrCapitulo(text)}
             style={styles.input}
           />
-                  <TouchableOpacity 
+          <TouchableOpacity 
               style={[styles.button, styles.buttonOutline]} 
               onPress={pickImage}>
             <Text style={styles.buttonOutlineText}>Selecionar Mangá</Text>

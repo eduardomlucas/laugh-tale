@@ -7,6 +7,12 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  containerLeitura: {
+    borderWidth: 5,
+    borderColor: '#8F43EE', 
+    borderRadius: 8,
+    backgroundColor: 'white'
+  },
   inputContainer: {
     width: '80%'
   },
@@ -28,14 +34,17 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginTop: 80,
   },
+  buttonContainerLeitura: {
+    width: '60%',
+    alignItems: 'center',
+    marginTop: 30,
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+  },
   //logo
   logo: {
     width: 130,
     height: 100,
-  },
-  pdf: {
-    flex: 1,
-    width: '100%',
   },
   //inputs
   input: {
@@ -92,6 +101,12 @@ export default StyleSheet.create({
     borderWidth: 2,
     width: '100%',
   },
+  buttonOutlineLeitura: {
+    backgroundColor: 'white',
+    borderColor: '#8F43EE',
+    borderWidth: 2,
+    width: '50%',
+  },
 
   //Texts
   buttonText: {
@@ -125,8 +140,8 @@ export default StyleSheet.create({
 
   //images
   image: {
-    width: 200,
-    height: 200,
+    width: 350,
+    height: 500,
     resizeMode: 'contain',
   },
 })

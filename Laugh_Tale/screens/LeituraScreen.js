@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity, View, FlatList, Image} from 'react-native'
-import { getDataFromFirestore, getAndDisplayImageFromStorage } from '../firebase'
+import { getDataFromFirestore, getPhotosArrayFromStorage } from '../firebase'
 import { React, useState, useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from '../estilo'
@@ -11,12 +11,17 @@ const LeituraScreen = ({navigation}) => {
   const handleAdicionar=()=>{
     navigation.replace("Adicionar")
   }
-  const [imageUri, setImageUri] = useState(null);
+  const [photoURLs, setPhotoURLs] = useState([]);
   const handleItemPress = async (item) => {
+    let aux = item.nomeManga+item.nrCapitulo.trim();
+    console.log(aux);
     try {
-      const imageUrl = await getAndDisplayImageFromStorage(item);
-      setImageUri(imageUrl);
-      navigation.navigate("Ler Manga", {imageUrl: imageUrl});
+      getPhotosArrayFromStorage(aux)
+      .then((urls) => {
+        setPhotoURLs(urls);
+      })
+      console.log(photoURLs)
+      navigation.navigate("Ler Manga", {photoURLs: photoURLs});
     } catch (error) {
       console.error('Erro ao obter imagem:', error);
     }
@@ -24,7 +29,7 @@ const LeituraScreen = ({navigation}) => {
   //Structure Data
   const [data, setData] = useState([]);
   useEffect(() => {
-    getDataFromFirestore('manga')
+    getDataFromFirestore('mangas')
       .then((dataArray) => {
         setData(dataArray);
       })
