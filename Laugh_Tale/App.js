@@ -8,7 +8,6 @@ import HomeScreen from './screens/HomeScreen';
 import LeituraScreen from './screens/LeituraScreen';
 import CriarScreen from './screens/CriarScreen';
 import AdicionarScreen from './screens/AdicionarScreen';
-import TesteScreen from './screens/TesteScreen'
 import LerMangaScreen from './screens/LerMangaScreen'
 
 const Stack = createNativeStackNavigator();
@@ -24,7 +23,6 @@ export default function App() {
         <Stack.Screen name="Adicionar" component={AdicionarScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Cadastro" component={CadastroScreen} />
-        <Stack.Screen name="Teste" component={TesteScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

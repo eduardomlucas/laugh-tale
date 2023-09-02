@@ -13,6 +13,15 @@ export default StyleSheet.create({
     borderRadius: 8,
     backgroundColor: 'white'
   },
+  boardContainer: {
+    height: 500,
+    width: 400,
+    borderWidth: 5,
+    borderColor: '#8F43EE', 
+    borderRadius: 8,
+    backgroundColor: 'white',
+    marginTop: 10
+  },
   inputContainer: {
     width: '80%'
   },
@@ -35,7 +44,7 @@ export default StyleSheet.create({
     marginTop: 80,
   },
   buttonContainerLeitura: {
-    width: '60%',
+    width: '100%',
     alignItems: 'center',
     marginTop: 30,
     justifyContent: 'space-around',
@@ -104,8 +113,8 @@ export default StyleSheet.create({
   buttonOutlineLeitura: {
     backgroundColor: 'white',
     borderColor: '#8F43EE',
-    borderWidth: 2,
-    width: '50%',
+    borderWidth: 4,
+    width: '30%', 
   },
 
   //Texts
