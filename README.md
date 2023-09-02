@@ -24,13 +24,8 @@ Como é possível facilitar o leitor a ter acesso, gerenciar e armazenar de suas
 - Trabalhar com arquivos (Mangás) no formato digital.
 - Desenvolver um sistema que possibilite a leitura dos arquvivos.
 - Realizar o gerenciamento dos arquivos, editar, excluir, listar e ordenar.
-
-### Funcionalidades
-
-O aplicativo prevê uma séria de funcionalidades. Um breve visão sobre as funcionalidades poder ser observado no diagrama de casos de uso abaixo:
-
-<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/DCU-1.png" width=700 align="center"/>
-
+- Realizar a criação de mangás em formato digital
+  
 ### Arquitetura
 
 A  estrutura do projeto foi desenvolvida na arquitetura conforme proposta abaixo. O Front-End escolhido para este projeto consiste na criação de interfaces para uma a aplicação móvel, importante destacar que este projeto não limitou-se apenas a um Front-End, futuramente poderão ser desenvolvidas mais aplicações Front-Ends utilizando o mesmo Back-End com pouquíssimas alterações ou até mesmo sem alterações.
