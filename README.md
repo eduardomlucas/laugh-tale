@@ -40,17 +40,6 @@ No Back-End utiliza-se a tecnologia  React Native e Javascript. Para gerenciar a
 <img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tecnologias-1.png" width=700 align="center"/>
 
 
-### Modelo ER
-
-**Em BREVE**
-
-### Telas
-
-Protótipo das telas.
-
-<a><img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tela_home-1.png" width=200 align="left"/></a>
-<img src="https://github.com/eduardomlucas/imagensLaughTale/blob/main/tela_leitura-1.png" width=200 align="center"/>
-
 Se você deseja contribuir com o projeto, adicionando novas funcionalidades, revisando o código ou propondo modificações e melhorias, consulte este [GUIA](https://github.com/eduardomlucas/LaughTale/blob/main/CODE_OF_CONDUCT.md) para propor sua contribuição.
 
 ## Créditos
